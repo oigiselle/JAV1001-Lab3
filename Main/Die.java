@@ -3,7 +3,7 @@
 // A00244514
 // Mobile Application Development - MAPD
 // JAV-1001 - 11329 - App Development for Android - 202201 - 001
-// Lab - 02
+// Lab - 03
 
 
 import java.util.Random;
@@ -23,11 +23,7 @@ public class Die{
 
     name = "d6";
     dieSides = 6;
-    if (currentNumberUp == 0){
-        currentNumberUp = roll();
-    
-    }
-    
+    currentNumberUp = roll();
     }
 
 /* A 1 argument constructor
@@ -38,12 +34,8 @@ the roll method*/
     public Die(int dieSides){
         this.dieSides = dieSides;
         name = "d"+dieSides;
+        currentNumberUp = roll();
         
-        if (currentNumberUp == 0){
-            currentNumberUp = roll();
-        
-        }
-    
     }
 
 /*A 2 argument constructor
@@ -53,14 +45,8 @@ Both the number of sides and the type are parameters; random side up generated f
 
        
         this.dieSides = dieSides;
-        this.name = "d"+dieSides;
-        if (currentNumberUp == 0){
-            currentNumberUp = roll();
-        
-        }
-
-
-    
+        this.name = name;
+        currentNumberUp = roll();
     }
 
 // The roll dice method using random

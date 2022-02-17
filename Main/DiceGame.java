@@ -3,7 +3,7 @@
 // A00244514
 // Mobile Application Development - MAPD
 // JAV-1001 - 11329 - App Development for Android - 202201 - 001
-// Lab - 02
+// Lab - 03
 
 
 public class DiceGame{
@@ -16,10 +16,7 @@ public class DiceGame{
         d20 = new Die(20);
         d4 = new Die(4, "d4");
 
-        
-
-
-// Create a default d6 - using 0 argument
+//Starting print out the statements...
 
 
         System.out.println();
@@ -30,6 +27,8 @@ public class DiceGame{
         System.out.println("The current side up for " + d6.name + " is " + d6.currentNumberUp + ".");
         System.out.println("The current side up for " + d20.name + " is " + d20.currentNumberUp + ".");
         System.out.println("The current side up for " + d4.name + " is " + d4.currentNumberUp + ".");
+
+// Using classes and calling the roll method
 
         System.out.println();
         System.out.println("Testing the roll method...");
@@ -42,6 +41,8 @@ public class DiceGame{
         System.out.println("Rolling the " + d4.name + "...");
         System.out.println("The new value to the " + d4.name + " is " + d4.roll());
         
+// Setting the d20 to the 20 side, using roll method as many times as necessary using while loop
+        System.out.println();
         System.out.println("Setting the " + d20.name + " to show " + d20.dieSides + "...");
 
         while(d20.randomSideUp != 20){
@@ -50,6 +51,7 @@ public class DiceGame{
         System.out.println("The side up is now " + d20.randomSideUp + " . Finally!");
 
         System.out.println();
+
         System.out.println("-----");
         System.out.println("BONUS");
         System.out.println("-----");
@@ -57,6 +59,8 @@ public class DiceGame{
 
         System.out.println("Creating 5 d6...");
 
+
+// Creating the 5 new dice        
         Die d6a, d6b, d6c, d6d, d6e;
 
         d6a = new Die();
@@ -67,7 +71,8 @@ public class DiceGame{
         
         int rolls = 0;
         boolean diceEquals = true;
-        
+
+// using while loop while the if contition is not satisfied. 
         while(diceEquals){
             
             d6a.roll();
@@ -76,7 +81,7 @@ public class DiceGame{
             d6d.roll();
             d6e.roll();
             
-
+// Everytime that it runs, it sums 1 to int rolls and print the total times at the end
             rolls += 1;
             
             if(d6a.randomSideUp == d6b.randomSideUp && d6b.randomSideUp == d6c.randomSideUp &&
@@ -92,9 +97,8 @@ public class DiceGame{
 
     }
 
-
-
-
-   
+  
 
 }
+
+// end of the code
